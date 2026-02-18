@@ -1,5 +1,7 @@
 export default {
-  async fetch(request, env, ctx) {
-    return new Response('¡Hola desde mi Worker!');
-  },
+  async fetch(request) {
+    return new Response('¡Funciona!', {
+      headers: { 'Content-Type': 'text/plain' }
+    });
+  }
 };
